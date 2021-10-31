@@ -1,0 +1,47 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createStation",
+			"inputs": [
+				{"name":"defence","type":"uint256"},
+				{"name":"name","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createObject",
+			"inputs": [
+				{"name":"name","type":"string"},
+				{"name":"addr","type":"address"},
+				{"name":"defence","type":"uint256"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"objectName","type":"string"},{"name":"objectAddress","type":"address"},{"name":"objectDefence","type":"uint256"}],"name":"objectArr","type":"tuple[]"},
+		{"components":[{"name":"objectName","type":"string"},{"name":"objectAddress","type":"address"},{"name":"objectDefence","type":"uint256"}],"name":"ObjAddr","type":"map(address,tuple)"},
+		{"components":[{"name":"attack","type":"uint256"},{"name":"defence","type":"uint256"}],"name":"unitArr","type":"tuple[]"},
+		{"components":[{"name":"name","type":"string"},{"name":"stationAddress","type":"address"},{"name":"defenseStation","type":"uint256"}],"name":"stationArr","type":"tuple[]"},
+		{"name":"statAddress","type":"optional(cell)"}
+	]
+}
